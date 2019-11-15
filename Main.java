@@ -27,8 +27,30 @@ class Main {
                     break;
         case "snakes":prices[i]=SNAKES;
                       break;
-        
       }
+      }
+      return prices;
     }
+
+  public static String [] animalTypes(){
+    Scanner atin=new Scanner(System.in);
+    String [] animalTypes = new String[1];
+    String response="";
+    int currentSize=0;
+    do{
+      System.out.println("\n Pls Enter the animal type. Pls enter \"done\" when you are finshed entering all the desired types = ");
+      response=atin.nextLine();
+      if(!response.toLowerCase().equals("done"))
+      {
+        if(currentSize>=animalTypes.length)
+        {
+          String animalTypes=Arrays.copyOf(animalTypes, animalTypes.length());
+        }
+      }
+    }while(!response.equals("done"));
+    return animalTypes;
+  }
+
+  
   }
 }
